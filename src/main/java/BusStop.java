@@ -17,4 +17,12 @@ public class BusStop {
     public int getQueueSize() {
         return this.queue.size();
     }
+
+    public void addToQueue(Person person) {
+        this.queue.add(person);
+    }
+
+    public Person removeFromQueue() {
+       return this.queue.remove(0);
+    }
 }

@@ -24,10 +24,13 @@ public class Bus {
         return this.passengers.size();
     }
 
-    public void addPassenger(Person person) {
+    public void addPassenger(BusStop busStop) {
+
+        Person personRemoved = busStop.removeFromQueue();
+
         int numberOfPassengers = getPassengerCount();
         if (numberOfPassengers < this.capacity) {
-            this.passengers.add(person);
+            this.passengers.add(personRemoved);
         }
     }
 
